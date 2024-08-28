@@ -8,7 +8,7 @@ jobs:
     - uses: actions/checkout@v4
     - uses: actions/setup-python@v5
     - run: pip install -r requirements.txt
-    - run: python main.py
+    - run: python build.py
     - uses: actions/upload-artifact@v4
       with:
         path: dist/PolyMod.exe
@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-python@v5
       - run: sudo apt-get install -y python3-tk
       - run: pip install -r requirements.txt
-      - run: python main.py
+      - run: python build.py
       - uses: actions/upload-artifact@v4
         with:
           path: dist/PolyMod
@@ -32,7 +32,7 @@ jobs:
       - uses: actions/setup-python@v5
       - run: brew install python3-tk
       - run: pip install -r requirements.txt
-      - run: python main.py
+      - run: python build.py
       - uses: actions/upload-artifact@v4
         with:
           path: dist/PolyMod
