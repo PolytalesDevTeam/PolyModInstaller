@@ -1,0 +1,36 @@
+name: Build
+on: [workflow_dispatch]
+jobs:
+  windows:
+    name: Windows
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+    - run: pip install -r requirements.txt
+    - run: python main.py
+    - uses: actions/upload-artifact@v4
+      with:
+        path: dist/PolyMod.exe
+  linux:
+    name: Linux
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+      - run: pip install -r requirements.txt
+      - run: python main.py
+      - uses: actions/upload-artifact@v4
+        with:
+          path: dist/PolyMod
+  macos:
+    name: MacOS
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+      - run: pip install -r requirements.txt
+      - run: python main.py
+      - uses: actions/upload-artifact@v4
+        with:
+          path: dist/PolyMod
