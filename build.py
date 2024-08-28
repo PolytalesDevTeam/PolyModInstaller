@@ -13,7 +13,7 @@ PyInstaller.__main__.run(
         "--name",
         "PolyMod",
         "--add-data",
-        ROOT + "/icon.ico;.",
+        ROOT + "/icon.ico:.",
         ROOT + "/main.py",
     ]
 )
