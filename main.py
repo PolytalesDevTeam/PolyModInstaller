@@ -55,12 +55,13 @@ def _install():
     )
     progress_bar.step()
 
-    customtkinter.CTkButton(app, text="Finish", command=lambda: finish(path)).grid(
+    customtkinter.CTkButton(app, text="Launch", command=lambda: launch(path)).grid(
         column=0, row=3, columnspan=2, padx=5, pady=5
     )
 
 
-def finish():
+def launch():
+    os.system("start steam://rungameid/874390")
     app.destroy()
     sys.exit()
 
