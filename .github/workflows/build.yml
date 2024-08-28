@@ -11,6 +11,7 @@ jobs:
     - run: python build.py
     - uses: actions/upload-artifact@v4
       with:
+        name: PolyMod.exe
         path: dist/PolyMod.exe
   linux:
     name: Linux
@@ -23,6 +24,7 @@ jobs:
       - run: python build.py
       - uses: actions/upload-artifact@v4
         with:
+          name: PolyMod
           path: dist/PolyMod
   macos:
     name: MacOS
@@ -35,4 +37,5 @@ jobs:
       - run: python build.py
       - uses: actions/upload-artifact@v4
         with:
+          name: PolyMod.macos
           path: dist/PolyMod
