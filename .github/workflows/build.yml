@@ -30,7 +30,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-      - run: brew install python3-tk
+      - run: pip install tk
       - run: pip install -r requirements.txt
       - run: python build.py
       - uses: actions/upload-artifact@v4
