@@ -55,7 +55,7 @@ def _install():
     )
     progress_bar.step()
 
-    customtkinter.CTkButton(app, text="Launch", command=lambda: launch(path)).grid(
+    customtkinter.CTkButton(app, text="Launch", command=launch).grid(
         column=0, row=3, columnspan=2, padx=5, pady=5
     )
 
